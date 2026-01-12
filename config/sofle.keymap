@@ -17,7 +17,20 @@
 #define ADJUST 4
 
 / {
+    behaviors {
+        rgb_spd_encoder: rgb_spd_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_SPI>, <&rgb_ug RGB_SPD>;
+        };
+		rgb_bri_encoder: rgb_bri_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
+        };
+    };
 
+    
    // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -119,7 +132,7 @@
 &none                           &none           &none           &none           &none           &none               &rgb_ug RGB_TOG  &none      &none &none &none &none &none &none
                                                 &none           &none           &none           &none               &tog GAMING            &none      &none &none &none &none
         >;
-			sensor-bindings = <&inc_dec_kp C_FF C_RW &inc_dec_kp C_VOL_UP C_VOL_DN>;
+			sensor-bindings = <&rgb_bri_encoder &rgb_spd_encoder>;
 		};
         	
     };
