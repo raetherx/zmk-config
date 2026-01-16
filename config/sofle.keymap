@@ -72,7 +72,7 @@
                  &kp LGUI &kp LALT &kp LCTRL &mo LOWER &kp RET  &kp SPACE &mo RAISE  &kp DEL &kp EQUAL  &kp BSLH
             >;
 
-            sensor-bindings = <&inc_dec_kp C_FF C_RW &inc_dec_kp C_VOL_UP C_VOL_DN>;
+            sensor-bindings = <&inc_dec_kp C_NEXT C_PREV &inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         lower_layer {
@@ -91,7 +91,7 @@
                     &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_msc SCRL_RIGHT SCRL_LEFT>;
         };
 
         raise_layer {
@@ -109,7 +109,7 @@
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&inc_dec_msc SCRL_RIGHT SCRL_LEFT &inc_dec_kp PG_UP PG_DN>;
         };
 
 		gaming_layer {
