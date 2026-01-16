@@ -28,6 +28,11 @@
             #sensor-binding-cells = <0>;
             bindings = <&rgb_ug RGB_BRI>, <&rgb_ug RGB_BRD>;
         };
+        l_r_encoder: l_r_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+        };
   		lshaps: lshift_caps_lock {
             compatible = "zmk,behavior-mod-morph";
             #binding-cells = <0>;
@@ -91,7 +96,7 @@
                     &trans    &trans      &trans    &trans    &trans   &trans &trans    &trans   &trans          &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &inc_dec_msc SCRL_RIGHT SCRL_LEFT>;
+            sensor-bindings = <&inc_dec_kp PG_UP PG_DN &l_r_encoder>;
         };
 
         raise_layer {
@@ -109,7 +114,7 @@
                         &trans       &trans       &trans       &trans  &trans   &trans  &trans    &trans    &trans   &trans
             >;
 
-            sensor-bindings = <&inc_dec_msc SCRL_RIGHT SCRL_LEFT &inc_dec_kp PG_UP PG_DN>;
+            sensor-bindings = <&l_r_encoder &inc_dec_kp PG_UP PG_DN>;
         };
 
 		gaming_layer {
