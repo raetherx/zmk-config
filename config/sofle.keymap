@@ -31,7 +31,7 @@
         l_r_encoder: l_r_encoder {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
-            bindings = <&msc SCRL_RIGHT>, <&msc SCRL_LEFT>;
+            bindings = <&msc MOVE_RIGHT>, <&msc MOVE_LEFT>;
         };
   		lshaps: lshift_caps_lock {
             compatible = "zmk,behavior-mod-morph";
