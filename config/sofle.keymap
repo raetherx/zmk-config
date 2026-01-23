@@ -17,7 +17,7 @@
 #define GAMING 3
 #define ADJUST 4
 
- {
+/ {
     behaviors {
         rgb_spd_encoder: rgb_spd_encoder {
             compatible = "zmk,behavior-sensor-rotate";
