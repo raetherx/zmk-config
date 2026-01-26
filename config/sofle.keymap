@@ -23,7 +23,7 @@
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH )>; 
         b-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH )>; 
-        steps = <80>;
+        steps = <20>;
         status = "okay";
     };
 
@@ -31,7 +31,7 @@
         compatible = "alps,ec11";
         a-gpios = <&pro_micro 20 (GPIO_ACTIVE_HIGH )>;
         b-gpios = <&pro_micro 21 (GPIO_ACTIVE_HIGH )>;
-        steps = <80>;
+        steps = <20>;
         status = "okay";
     };
 	
