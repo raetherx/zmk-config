@@ -67,11 +67,12 @@
 
     };
 
-
+/*
 	chosen {
 		zephyr,console = &cdc_acm_uart;
 	};
-    
+*/
+
    // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -179,7 +180,9 @@
     };
 };
 
+
 // Allow USB logging
+/*
 &usbd {
 	status = "okay";
 	cdc_acm_uart: cdc_acm_uart {
@@ -187,3 +190,4 @@
 		label = "CDC_ACM_0";
 	};
 };
+*/
