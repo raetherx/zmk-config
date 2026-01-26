@@ -177,6 +177,7 @@
 		};
         	
     };
+};
 
 // Allow USB logging
 &usbd {
@@ -185,6 +186,4 @@
 		compatible = "zephyr,cdc-acm-uart";
 		label = "CDC_ACM_0";
 	};
-};
-
 };
